@@ -26,11 +26,12 @@ CFLAGS += -Wall -Werror $(INCLUDE) -g3
 
 TEST_SRC = main.c test_bitops.c test_dispatch.c test_endian.c test_reg.c test_timeout.c \
            test_cadence_ospi_spimem.c test_spimem_nor_flash.c \
-           test_versal2_ospi_dma.c
+           test_versal2_ospi_dma.c test_pl011_uart.c
 
 WHAL_SRC = $(WHAL_DIR)/src/reg.c \
            $(WHAL_DIR)/src/gpio/gpio.c \
            $(WHAL_DIR)/src/uart/uart.c \
+           $(WHAL_DIR)/src/uart/pl011_uart.c \
            $(WHAL_DIR)/src/flash/flash.c \
            $(WHAL_DIR)/src/flash/spimem_nor_flash.c \
            $(WHAL_DIR)/src/timer/timer.c \

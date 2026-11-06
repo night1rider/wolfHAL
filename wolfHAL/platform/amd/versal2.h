@@ -22,12 +22,19 @@
 #ifndef WHAL_VERSAL2_H
 #define WHAL_VERSAL2_H
 
+#include <wolfHAL/uart/pl011_uart.h>
 #include <wolfHAL/spimem/cadence_ospi_spimem.h>
 
 /*
  * @file versal2.h
- * @brief Convenience initializers for AMD Versal Gen 2 device instances.
+ * @brief Convenience initializers for AMD Versal Gen 2 (AI Edge Series
+ *        Gen 2 / Prime Series Gen 2) device instances.
  */
+
+/* LPD UARTs, Arm PL011 (AM026 ch. 63; bases from AM028 UART module). */
+#define WHAL_VERSAL2_UART0_BASE 0xF1920000
+#define WHAL_VERSAL2_UART1_BASE 0xF1930000
+#define WHAL_VERSAL2_UART_DRIVER &whal_Pl011_Uart_Driver
 
 /* OSPI flash controller (Cadence OSPI, AM026 ch. 66, AM028 OSPI module). */
 #define WHAL_VERSAL2_OSPI_BASE   0xF1010000

@@ -40,6 +40,7 @@ void whal_Test_Reg(void);
 void whal_Test_CadenceOspi_SpiMem(void);
 void whal_Test_SpiMemNor_Flash(void);
 void whal_Test_Versal2_OspiDma(void);
+void whal_Test_Pl011_Uart(void);
 #ifndef WHAL_CFG_NO_TIMEOUT
 void whal_Test_Timeout(void);
 #endif
@@ -57,6 +58,7 @@ int main(void)
     whal_Test_CadenceOspi_SpiMem();
     whal_Test_SpiMemNor_Flash();
     whal_Test_Versal2_OspiDma();
+    whal_Test_Pl011_Uart();
 #ifndef WHAL_CFG_NO_TIMEOUT
     whal_Test_Timeout();
 #endif
